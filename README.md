@@ -1,9 +1,29 @@
-# Project Name
+# Project Name: react gallery
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+## Prerequisites:
+Running this app requires some setup to access the provided data and to view the app in your browser. **Follow the instruction below**
 
-## Description
+    Running the server code requires `nodemon`. If you don't already have `nodemon`, install it globally with `npm install nodemon --global`.
 
-Your project description goes here. What problem did you solve? How did you solve it?
+    ```
+    npm install
+    npm run server
+    ```
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+    Now that the server is running, open a new terminal tab with `cmd + t` and start the react client app.
+
+    ```
+    npm run client
+
+    A new browser window will open so that you can view the app on **localhost:3000**
+
+
+## Prerequisites:
+
+This app provides for the display a series of images. You can click on the image to display a brief description of the image. Clicking on the desciption will return you to the image.
+
+You can also click to --love-- an images. After clicking the --I love it-- button refresh the window to see the total number of loves.
+
+
+## Screen shot.
+![Screen Shot](./Screen.png)
