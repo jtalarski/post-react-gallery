@@ -22,7 +22,7 @@ Running this app requires some setup to access the provided data and to view the
 
 This app provides for the display a series of images. You can click on the image to display a brief description of the image. Clicking on the desciption will return you to the image.
 
-You can also click to --love-- an images. After clicking the --I love it-- button refresh the window to see the total number of loves.
+You can also click to __love__ an images. After clicking the --I love it-- button refresh the window to see the total number of loves.
 
 
 ## Screen shot.
