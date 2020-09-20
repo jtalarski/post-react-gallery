@@ -27,10 +27,28 @@ axios({
     images: response.data
   })
 })
-
+onLoveIt = () => {
+  console.log("Ilove it", this.props.id);
+   
+  // failed attempt at using state change to refresh the DOM
+  // this.setState({
+  //     changeLikes: !this.state.changeLikes
+  //   });
+  axios({
+    method: "PUT",
+    url: `/gallery/like/${this.props.id}`,
+    data: { id: "id" },
+  }).then((response) => {
+      console.log("response from server", response);
+     
+  }).catch(function (err) {
+      console.log("Error increasing loves", err);
+      alert("not a good thing");
+  });
+};
 
   render() {
-
+ 
     return (
       <div className="App">
         <header className="App-header">
