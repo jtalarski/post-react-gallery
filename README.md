@@ -15,10 +15,10 @@ Running this app requires some setup to access the provided data and to view the
     ```
     npm run client
 
-    A new browser window will open so that you can view the app on **localhost:3000**
+    A new browser window will open so that you can view the app on **localhost:3000**. The app will now being run in your browser.
 
 
-## Prerequisites:
+## Description:
 
 This app provides for the display a series of images. You can click on the image to display a brief description of the image. Clicking on the desciption will return you to the image.
 
