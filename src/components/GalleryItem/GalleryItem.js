@@ -33,7 +33,6 @@ class GalleryItem extends Component {
       isToggled: !this.state.isToggled
     });
   };
-
   render() {
     console.log("Image props in GalleryItem", this.props);
     // using conditional rendering to toggle between displaying an
@@ -53,6 +52,7 @@ class GalleryItem extends Component {
               <button onClick={this.onLoveIt}>I Love It</button>
             </p>
             <p>{this.props.likes} people like this</p>
+            {this.props.changeFunc}
           </div>
         );
       } else {
