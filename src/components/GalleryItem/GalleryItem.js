@@ -19,7 +19,7 @@ class GalleryItem extends Component {
       data: { id: "id" },
     }).then((response) => {
         console.log("response from server", response);
-       ;
+     // placeholder for function call to getImages on App.js 
     }).catch(function (err) {
         console.log("Error increasing loves", err);
         alert("not a good thing");
