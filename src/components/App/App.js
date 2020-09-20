@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
 import axios from 'axios';
-import GalleryItem from '../GalleryItem/GalleryItem';
+// import GalleryItem from '../GalleryItem/GalleryItem';
 
 class App extends Component {
 // set initial state
