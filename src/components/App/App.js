@@ -27,8 +27,8 @@ axios({
     images: response.data
   })
 })
-onLoveIt = () => {
-  console.log("Ilove it", this.props.id);
+onLoveIt = (itemId) => {
+  console.log("Ilove it", itemId);
    
   // failed attempt at using state change to refresh the DOM
   // this.setState({
@@ -36,11 +36,11 @@ onLoveIt = () => {
   //   });
   axios({
     method: "PUT",
-    url: `/gallery/like/${this.props.id}`,
-    data: { id: "id" },
+    url: `/gallery/like/${itemId}`,
+    // data: { id: "id" },
   }).then((response) => {
       console.log("response from server", response);
-     
+     this.getImages();
   }).catch(function (err) {
       console.log("Error increasing loves", err);
       alert("not a good thing");
@@ -56,7 +56,7 @@ onLoveIt = () => {
           <h4>Click image to toggle between image and description</h4>
         </header>
         <br/>
-        <GalleryList imagesProp={this.state.images}/>
+        <GalleryList imagesProp={this.state.images} onLoveIt={this.onLoveIt}/>
       </div>
     );
   }

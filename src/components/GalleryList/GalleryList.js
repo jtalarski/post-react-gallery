@@ -13,16 +13,12 @@ state= {
 render(){
 
     return (
-
+<div>
         <div>
-{this.props.imagesProp.map(image=>
-<GalleryItem key={image.id}
-id={image.id}
-path={image.path}
-description={image.description}
-likes={image.likes}
-/>
-)}
+        {this.props.imagesProp.map(image => 
+          <GalleryItem image={image} key={image.id} onLoveIt={this.props.onLoveIt} />
+        )}
+      </div>
 </div>
     )
 }

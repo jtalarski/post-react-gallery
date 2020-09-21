@@ -46,12 +46,12 @@ class GalleryItem extends Component {
         console.log("Toggle Me");
   
         return (
-          <div key={this.props.id} className="displayDiv">
-            <p className="descDisplay" onClick={this.toggleDescritpion}>{this.props.description} </p>
+          <div key={this.props.image.id} className="displayDiv">
+            <p className="descDisplay" onClick={this.toggleDescritpion}>{this.props.image.description} </p>
             <p>
-              <button onClick={this.onLoveIt}>I Love It</button>
+            <button onClick={() => this.props.onLoveIt(this.props.image.id)}>Love it!</button>
             </p>
-            <p>{this.props.likes} people like this</p>
+            <p>{this.props.image.likes} people like this</p>
             {this.props.changeFunc}
           </div>
         );
@@ -60,11 +60,11 @@ class GalleryItem extends Component {
   
         return (
           <div key={this.props.id} className="displayDiv">
-            <input type="image" src={this.props.path} alt="random" onClick={this.toggleDescritpion} width="100" height="100"></input>
+            <input type="image" src={this.props.image.path} alt="random" onClick={this.toggleDescritpion} width="100" height="100"></input>
             <p>
-              <button onClick={this.onLoveIt}>I Love It</button>
+            <button onClick={() => this.props.onLoveIt(this.props.image.id)}>Love it!</button>
             </p>
-            <p>{this.props.likes} people like this</p>
+            <p>{this.props.image.likes} people like this</p>
           </div>
         );
       }
